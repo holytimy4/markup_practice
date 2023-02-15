@@ -1,0 +1,138 @@
+.content {
+  width: 75%;
+  background-color: #fff;
+}
+
+.content__header {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  border-bottom: 0.1rem solid #bebebe;
+}
+
+.content__lastonline {
+  opacity: 0.4;
+  font-style: italic;
+}
+
+.content__username {
+  align-items: center;
+  line-height: 1;
+  margin-right: 15px;
+}
+
+.content__body {
+  display: flex;
+  flex-direction: column;
+
+  height: 85%;
+  width: 100%;
+}
+
+.content__msg {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+
+  max-width: 40rem;
+  padding: 20px;
+
+  margin: 5px;
+}
+
+.content__outmsg {
+  margin-left: auto;
+
+  background-color: lightseagreen;
+}
+
+.content__inmsg {
+  position: relative;
+  background-color: lightpink;
+  margin-left: 8rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("https://via.placeholder.com/100") center;
+    width: 5rem;
+    height: 5rem;
+    left: -7rem;
+    top: 1rem;
+    border-radius: 50%;
+  }
+  & ~ &::before {
+    width: 0;
+    height: 0;
+  }
+
+  &::after {
+    content: "";
+    height: 0;
+    width: 0;
+    left: -1rem;
+    top: 3rem;
+    position: absolute;
+    border-right: solid 1rem lightpink;
+    border-bottom: solid 1rem transparent;
+    border-top: solid 1rem transparent;
+  }
+  & ~ &::after {
+    border: none;
+  }
+}
+
+.content__msgtime {
+  text-align: right;
+  margin-top: 5px;
+
+  opacity: 0.5;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: $third-ff;
+}
+
+.content__textfield {
+  border-top: 0.1rem solid #bebebe;
+  display: flex;
+  padding: 15px;
+}
+
+.content__msgform {
+  display: flex;
+  width: 100%;
+}
+
+.content__input {
+  width: 80%;
+  border-radius: 1rem;
+  border: 1px solid #bebebe;
+  padding: 0 5px;
+}
+
+.content__submit {
+  width: 20%;
+  text-align: center;
+  border: 1px solid #bebebe;
+  margin-left: 15px;
+  padding: 5px 10px;
+  border-radius: 1rem;
+}
+
+.content__submit:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.content__submitinput {
+  display: none;
+}
+
+.content__submiticon {
+  width: 35px;
+}
